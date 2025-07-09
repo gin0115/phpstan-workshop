@@ -33,4 +33,37 @@ if ( false !== $phpstan_workshop_files ) {
 	}
 }
 
+/**
+ * File that returns whatever is passed.
+ *
+ * @param T $input The input value to return.
+ * @return T
+ * @template T
+ */
+function phpstan_workshop_return_input( mixed $input ): mixed {
+	return $input;
+}
+
+/**
+ * Returns a mixed.
+ *
+ * @param mixed ...$inputs These do nothing.
+ *
+ * @phpstan-return int|string|float|bool|null|array<string>|array<string, string>|stdClass
+ * @return mixed
+ */
+function phpstan_workshop_return_mixed( mixed ...$inputs ): mixed {
+	$options = array(
+		'string',
+		1,
+		1.0,
+		true,
+		array( 'list', 'of', 'strings' ),
+		array( 'key' => 'value' ),
+		new stdClass(),
+		null,
+	);
+	return $options[ array_rand( $options ) ];
+}
+
 // endregion
