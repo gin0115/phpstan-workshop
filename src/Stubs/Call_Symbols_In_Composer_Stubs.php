@@ -28,7 +28,7 @@ final class Call_Symbols_In_Composer_Stubs{
 	 * @return integer
 	 */
 	public function get_bp_user_count(int $user): int{
-		return bp_get_total_friend_count( $user );
+		return bp_get_total_friend_count( $user );  // ✅
 	}
 
 	/**
@@ -37,8 +37,8 @@ final class Call_Symbols_In_Composer_Stubs{
 	 * @return boolean
 	 */
 	public function get_bp_is_active(): bool {
-		$bp = new \BP_Members_Invitation_Manager();
-		return $bp->run_send_action(new \BP_Invitation(12));
+		$bp = new \BP_Members_Invitation_Manager();  // ✅
+		return $bp->run_send_action(new \BP_Invitation(12));  // ✅
 	}
 
 	/**
@@ -49,7 +49,7 @@ final class Call_Symbols_In_Composer_Stubs{
 	 * @return integer
 	 */
 	public function cget_undefined_function( string $foo ): int {
-		return some_undefined_function( $foo );
+		return some_undefined_function( $foo ); // ❌
 	}
 
 	/**
@@ -58,8 +58,8 @@ final class Call_Symbols_In_Composer_Stubs{
 	 * @return string
 	 */
 	public function get_undefined_method(): string {
-		$bp = new \BP_Members_Invitation_Manager();
-		return $bp->get_undefined_method();
+		$bp = new \BP_Members_Invitation_Manager();  // ✅
+		return $bp->get_undefined_method(); // ❌
 	}
 
 	/**
@@ -68,7 +68,7 @@ final class Call_Symbols_In_Composer_Stubs{
 	 * @return string
 	 */
 	public function get_bp_constant(): string {
-		return BP_REQUIRED_PHP_VERSION;
+		return BP_REQUIRED_PHP_VERSION;  // ✅
 	}
 
 }

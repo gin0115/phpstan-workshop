@@ -20,7 +20,7 @@ final class Call_Symbols_In_Ignore_List {
 	 * @return string
 	 */
 	public function get_ignored_function(): string {
-		return some_ignored_function();
+		return some_ignored_function();  // ✅
 	}
 
 	/**
@@ -29,8 +29,8 @@ final class Call_Symbols_In_Ignore_List {
 	 * @return string
 	 */
 	public function get_ignored_class(): string {
-		$ignored_class = new \Ignored_Class();
-		return $ignored_class->get_ignored_method();
+		$ignored_class = new \Ignored_Class();  // ✅
+		return $ignored_class->get_ignored_method();  // ✅
 	}
 
 	/**
@@ -39,6 +39,6 @@ final class Call_Symbols_In_Ignore_List {
 	 * @return string
 	 */
 	public function get_non_ignored_function(): string {
-		return some_non_ignored_function();
+		return some_non_ignored_function(); // ❌
 	}
 }

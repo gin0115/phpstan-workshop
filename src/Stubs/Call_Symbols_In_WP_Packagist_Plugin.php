@@ -20,7 +20,7 @@ final class Call_Symbols_In_WP_Packagist_Plugin {
 	 * @return void
 	 */
 	public function cf7_function_call(): void {
-		if ( wpcf7_include_module_file( 'contact-form-7' ) ) {
+		if ( wpcf7_include_module_file( 'contact-form-7' ) ) { // ✅
 			// Do something with the contact form
 		}
 	}
@@ -31,7 +31,7 @@ final class Call_Symbols_In_WP_Packagist_Plugin {
 	 * @return void
 	 */
 	public function cf7_class_call(): void {
-		$pipe = new \WPCF7_Pipe('hello|world');
+		$pipe = new \WPCF7_Pipe('hello|world'); // ✅
 		print $pipe->before;
 		print $pipe->after;
 	}
@@ -42,6 +42,6 @@ final class Call_Symbols_In_WP_Packagist_Plugin {
 	 * @return string
 	 */
 	public function cf7_constant_call(): string {
-		return \WPCF7_VERSION;
+		return \WPCF7_VERSION; // ✅
 	}
 }
