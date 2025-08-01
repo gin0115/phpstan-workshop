@@ -35,8 +35,11 @@
         "lucatume/wp-browser": "^4",
 
         "wpackagist-plugin/woocommerce": "9.5.*",
+        "wpackagist-plugin/contact-form-7": "*",
 
-        "roave/security-advisories": "dev-latest"
+        "roave/security-advisories": "dev-latest",
+        "gin0115/buddypress-stubs": "^11.1",
+        "phpstan/phpstan-strict-rules": "^2.0"
     },
 
     "autoload": {
@@ -62,7 +65,7 @@
         ],
         "lint:php:phpcs": "phpcs --standard=./.phpcs.xml --basepath=. ./ -v",
         "lint:php:phpmd": "phpmd ./ ansi ./.phpmd.xml -v",
-        "lint:php:phpstan": "phpstan analyse -c ./.phpstan.neon -v --memory-limit=1G",
+        "lint:php:phpstan": "phpstan analyse -c ./.phpstan.neon -v -l8 --memory-limit=1G",
 
         "internationalize": [
             "@i18n:makepot",

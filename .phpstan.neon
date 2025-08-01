@@ -2,5 +2,18 @@ includes:
     - vendor/a8cteam51/team51-configs/quality-assurance/phpstan.dist.neon
 
 parameters:
+    level: 8
     scanDirectories:
-        - vendor/wpackagist-plugin/woocommerce
+        - vendor/wpackagist-plugin
+    bootstrapFiles:
+        - vendor/gin0115/buddypress-stubs/buddypress-stubs.php
+        - phpstan-bootstrap.php
+    ignoreErrors:
+        # Here we suppress errors for this function but only in this file
+        -
+            message: "#Function some_ignored_function not found#"
+            path: %currentWorkingDirectory%/src/Stubs/Call_Symbols_In_Ignore_List.php
+		# Hide error for class not existing
+        - "#Instantiated class Ignored_Class not found#"
+		# Regex that will ignore that method on an
+        - "#Call to method get_ignored_method\\(\\) on .*Ignored_Class#"
