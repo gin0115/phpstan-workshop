@@ -4,3 +4,5 @@ includes:
 parameters:
     scanDirectories:
         - vendor/wpackagist-plugin/woocommerce
+    typeAliases:
+        NeonFooBar: 'array{foo: string, bar: string}'
