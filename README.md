@@ -18,3 +18,5 @@ There are multiple sections, these are all branches that need checking out, runn
 1. Check out the desired feature branch
 2. Run `composer update`
 3. Run `composer lint:php:phpstan` to see any errors
+
+The relevant code examples can be found in the `src` directory of each branch.
