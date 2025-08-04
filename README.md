@@ -12,6 +12,7 @@ There are multiple sections, these are all branches that need checking out, runn
 - [feature/basic-types](https://github.com/gin0115/phpstan-workshop/tree/feature/basic-types) 
 - [feature/objects](https://github.com/gin0115/phpstan-workshop/tree/feature/objects)
 - [feature/use-composer-stubs](https://github.com/gin0115/phpstan-workshop/tree/feature/use-composer-stubs)
+- [feature/type-juggling](https://github.com/gin0115/phpstan-workshop/tree/feature/type-juggling)
 
 ## Usage
 
