@@ -15,7 +15,7 @@ defined( 'ABSPATH' ) || exit;
 final class Strings {
 
 	/**
-	 * Im a method that only acceopts a string, but not as a type hint.
+	 * Im a method that only accepts a string, but not as a type hint.
 	 *
 	 * @param string $input The input string.
 	 *
@@ -26,7 +26,7 @@ final class Strings {
 	}
 
 	/**
-	 * Im a method that only accepts a string, but not as a type hint or dockblock.
+	 * Im a method that only accepts a string, but not as a type hint or docblock.
 	 *
 	 * @param mixed $input The input string.
 	 *

@@ -70,9 +70,9 @@ final class Callables_N_Bool{
 	}
 
 	/**
-	 * Im a method that only allows a Closure string that takes a mixed value and returns an int.
+	 * Im a method that only allows a Closure that takes a mixed value and returns an int.
 	 *
-	 * @param \Closure(mixed):int $callback The callback string.
+	 * @param \Closure(mixed):int $callback The callback.
 	 *
 	 * @return int The result of the callback.
 	 */
