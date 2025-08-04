@@ -168,7 +168,7 @@ function phpstan_workshop_output_requirements_error( $error ) {
 								/* translators: 1: Current WP version, 2: Minimum WP version */
 								__( 'Current <em>WordPress version (%1$s)</em> does not meet minimum required version of %2$s.', 'phpstan-workshop' ),
 								get_bloginfo( 'version' ),
-								$error_data['requires_wp']
+								$error_data['requires_wp'] ?? '6.7'
 							);
 							break;
 						case 'plugin_php_incompatible':
@@ -176,7 +176,7 @@ function phpstan_workshop_output_requirements_error( $error ) {
 								/* translators: 1: Current PHP version, 2: Minimum PHP version */
 								__( 'Current <em>PHP version (%1$s)</em> does not meet minimum required version of %2$s.', 'phpstan-workshop' ),
 								PHP_VERSION,
-								$error_data['requires_php']
+								$error_data['requires_php'] ?? '8.2'
 							);
 							break;
 						case 'missing_autoloader':

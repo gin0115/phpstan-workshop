@@ -2,5 +2,6 @@ includes:
     - vendor/a8cteam51/team51-configs/quality-assurance/phpstan.dist.neon
 
 parameters:
+    reportPossiblyNonexistentGeneralArrayOffset: true
     scanDirectories:
         - vendor/wpackagist-plugin/woocommerce
